@@ -7,6 +7,8 @@ on:
 #    - cron: '9 * * * *'
   workflow_dispatch:
 
+env:
+    MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
 
 permissions:
   contents: read
@@ -32,6 +34,7 @@ jobs:
       uses: osdc-code-maven/osdc-site-generator@v1
 
     - name: Upload artifact
+      if: github.ref == 'refs/heads/main'
       uses: actions/upload-pages-artifact@v1
 
   # Deployment job
