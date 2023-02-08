@@ -7,8 +7,8 @@
       }
     ]
     "projects": [
-      {
-        "url": "https://metacpan.org/pod/DBI"
-      }
+        "https://metacpan.org/pod/DBI",
+	"https://metacpan.org/pod/DBD::Oracle",
+	"https://metacpan.org/pod/DBD::Pg"
     ]
 }
